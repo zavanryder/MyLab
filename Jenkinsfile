@@ -36,10 +36,6 @@ pipeline{
         // Stage3 : Publish the artifacts to Nexus
         stage ('Publish to Nexus'){
             steps {
-                script {
-
-                def NexusRepo = Version.endsWith("SNAPSHOT") ? "VinaysDevOpsLab-SNAPSHOT" : "VinaysDevOpsLab-RELEASE"
-
                 nexusArtifactUploader artifacts: 
                 [[artifactId: "VinayDevOpsLab", 
                 classifier: '', 
@@ -52,7 +48,7 @@ pipeline{
                 protocol: 'http', 
                 repository: "VinaysDevOpsLab-SNAPSHOT", 
                 version: "version: '0.0.4-SNAPSHOT"
-             }
+             
             }
         }
 
