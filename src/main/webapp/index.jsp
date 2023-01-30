@@ -22,7 +22,7 @@
 </head>
 
 <body>
-    <h1>FOR ME</h1>
+
 
 <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container">
@@ -53,12 +53,12 @@
 <div class="jumbotron">
     <div class="container">
         <h1>Hello</h1>
-        <p>This is Vinays DevOps AWS Lab EDITED BY ZAVAN</p>
+        <p>This is Vinays DevOps AWS Lab EDITED BY ZAVAN HAHA</p>
         <p><a class="btn btn-primary btn-lg" role="button">Learn more &raquo;</a></p>
         <p><a class="btn btn-primary btn-lg" role="button">Success!! more &raquo;</a></p>
     </div>
 </div>
-
+<h1>FOR ME</h1>
 <div class="container">
     <!-- Example row of columns -->
     <div class="row">
