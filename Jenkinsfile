@@ -33,28 +33,28 @@ pipeline{
 
 
         // Stage3 : Publish the artifacts to Nexus
-        // stage ('Publish to Nexus'){
-        //     steps {
-        //         script {
+        stage ('Publish to Nexus'){
+            steps {
+                script {
 
-        //         def NexusRepo = Version.endsWith("SNAPSHOT") ? "JakeDevOpsLab-SNAPSHOT" : "JakeDevOpsLab-RELEASE"
+                def NexusRepo = Version.endsWith("SNAPSHOT") ? "JakeDevOpsLab-SNAPSHOT" : "JakeDevOpsLab-RELEASE"
 
-        //         nexusArtifactUploader artifacts: 
-        //         [[artifactId: "${ArtifactId}", 
-        //         classifier: '', 
-        //         file: "target/${ArtifactId}-${Version}.war", 
-        //         type: 'war']], 
-        //         credentialsId: '1b3271be-4403-4d7a-9394-1af12e5e8b8c', 
-        //         groupId: "${GroupId}", 
-        //         nexusUrl: '192.168.4.153:8081', 
-        //         nexusVersion: 'nexus3', 
-        //         protocol: 'http', 
-        //         repository: "${NexusRepo}", 
-        //         version: "${Version}"
+                nexusArtifactUploader artifacts: 
+                [[artifactId: "${ArtifactId}", 
+                classifier: '', 
+                file: "target/${ArtifactId}-${Version}.war", 
+                type: 'war']], 
+                credentialsId: '44301edd-ac6c-47e7-92f8-8f2b230104b0', 
+                groupId: "${GroupId}", 
+                nexusUrl: '192.168.4.147:8081', 
+                nexusVersion: 'nexus3', 
+                protocol: 'http', 
+                repository: "${NexusRepo}", 
+                version: "${Version}"
 
-        //         }
-        //     }
-        // }
+                }
+            }
+        }
 
         // Stage3 : Publish the artifacts to Nexus
         // stage ('Publish to Nexus'){
